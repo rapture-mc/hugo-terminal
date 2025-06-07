@@ -1,10 +1,10 @@
 baseURL: "https://cloak.megacorp.industries"
 theme: "terminalcv"
-title: "Terminal About"
+title: "Terminal CV"
 
 params:
   version: "2.0.0"
-  description: "Terminal About"
+  description: "Terminal CV"
   prompt:
     core:
       text: "megaman@megacorp.industries"
@@ -28,8 +28,17 @@ params:
 
   exitMessage: "[Session completed, the browser window can be safely closed]"
   source: true
-  #use a ‎ (blank character) if your first character of the ascii art is a whitespace
+  # use a ‎ (blank character) if your first character of the ascii art is a whitespace
+  # "&#92;" is the HTML character for "\" as a workaround
   greeting: |
+   ‎                     _  _
+   ‎                    / \/ \
+   ‎                   /      &#92;
+   ‎                  /        &#92;
+   ‎                 |          |
+   ‎                 |___/\/\___|
+   ‎ 
+   ‎==============================================
    ‎ __  __
    ‎|  \/  |
    ‎| \  / | ___  __ _  __ _  ___ ___  _ __ _ __
@@ -38,17 +47,15 @@ params:
    ‎|_|  |_|\___|\__, |\__,_|\___\___/|_|  | .__/
    ‎              __/ |                    | |
    ‎             |___/                     |_|
-   ‎ _____           _           _        _
-   ‎|_   _|         | |         | |      (_)
-   ‎  | |  _ __   __| |_   _ ___| |_ _ __ _  ___  ___ 
-   ‎  | | | '_ \ / _` | | | / __| __| '__| |/ _ \/ __|
-   ‎ _| |_| | | | (_| | |_| \__ \ |_| |  | |  __/\__ \
-   ‎|_____|_| |_|\__,_|\__,_|___/\__|_|  |_|\___||___/
+   ‎
+   ‎==============================================
 
 
     By Ben Harris
 
-    Type 'help' for a list of available commands...
+    Type 'help' or '?' for a list of available commands...
+
+    Tab completion available for commands also.
 
   bootsequence: |
     User request detected
@@ -69,27 +76,27 @@ params:
     ..............................
     ....................................
 
-    Copyright 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
     Megacorp Industries Pty Ltd. All rights reserved.
-    Copyright 2024, 2025
+    Copyright 2025.
 
-    [NixOSBoot1]: ready
-    [NixOSBoot2]: ready
+    [NixOSBootStage1]: ready
+    [NixOSBootStage2]: ready
     [Webserver]: ready 
     [HUGO]: ready
 
     Boot Complete, accepting user input.
   whois:
     details:
-      name: "Ben harris"
+      name: "Ben Harris"
       profession: "Systems Admin"
       location: "Darwin, Australia"
       email: "ben.r.harris@protonmail.com"
       homelink: "https://megacorp.industries"
       description: |
-        Systems administrator who is interested in all things technology
 
-        Passionate about solving problems with technology (especially using free and open source solutions)
+        Systems administrator who is interested in all things technology.
+
+        Passionate about solving problems with technology (especially using free and open source solutions).
 
   social:
     details:
@@ -98,21 +105,21 @@ params:
 
   work:
     details:
-      - jobTitle: ICT Systems Engineer
+      - jobTitle: Systems Engineer
         color: red
         company: "Sitzler Pty Ltd"
         location: Darwin, Australia
         date: January 2025 - Present
         description: Systems engineer building and fixing company IT infrastructure.
 
-      - jobTitle: ICT Systems Engineer
+      - jobTitle: Systems Engineer
         color: purple
         company: "Area9"
         location: Darwin, Australia
         date: July 2022  - January 2025
-        description: Systems Engineer providing systems admin support for tens of private businesses.
+        description: Systems Engineer providing systems admin support for private businesses across Australia.
 
-      - jobTitle: ICT Desktop Engineer
+      - jobTitle: Desktop Engineer
         company: "NEC"
         location: Darwin, Australia
         date: Janurary 2020 - July 2022
@@ -126,8 +133,6 @@ params:
         description: Completed High School...
 
   skills:
-    settings:
-      useLess: true
     details:
       - name: NixOS
         percentage: 95
@@ -149,7 +154,11 @@ params:
 
   softskills:
     details:
-      - name: Excellent with working with teams
+      - name: Excellent with working in a team environment
+        color: red
+        percentage: 90
+
+      - name: Excellent communication skills
         color: red
         percentage: 90
 
@@ -162,14 +171,21 @@ params:
 
   projects:
     details:
-      - title: Ansible FortiGate Deployments
+      - title: Ansible FortiGate Deployments (@Area9)
         color: red
-        date: Since 2019
+        date: 2019
         description: |
-          Automated the deployment of FortiGate's using Ansible.
-
+          - Automated the deployment of FortiGate's using Ansible.
           - Creating Ansible roles to modularize common deployment options.
           - Improved reliability of FortiGate deployments
+
+      - title: Built ICT documentation and secrets management systems as IaC (@Sitzler)
+        color: red
+        date: Since 2025
+        description: |
+          - Proposed, designed, implemented and actively maintaining documentation and secrets management systems
+          - Built entirely with IaC code (NixOS)
+          - Actively teaching and demonstrating the advantages of IaC in an IT environnmentn
 
   certifications:
     details:
